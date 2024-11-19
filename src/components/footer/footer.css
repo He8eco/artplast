@@ -1,0 +1,36 @@
+footer {
+  background-image: url("../../img/header.webp");
+  padding: 2rem;
+  color: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.contacts {
+  width: 30%;
+}
+
+.contacts p {
+  margin-bottom: 0.5rem;
+}
+
+.contacts p:first-child {
+  font-size: 1.5rem;
+}
+
+.map {
+  display: flex;
+  width: 60%;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.footer__title {
+  width: 100%;
+  text-align: center;
+}

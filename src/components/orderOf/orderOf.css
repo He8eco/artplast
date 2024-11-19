@@ -1,0 +1,16 @@
+.order-of {
+  .order-title {
+    background-color: #280f0f;
+    padding: 0.5rem;
+    margin: 0 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.35rem;
+  }
+  .category-name {
+    font-size: 1.25rem;
+  }
+  .card {
+    height: 13rem;
+  }
+}
