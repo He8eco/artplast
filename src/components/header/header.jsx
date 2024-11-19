@@ -68,7 +68,7 @@ export default function Header() {
             </div>
           </>
         )}
-        <p className="telephone">+7 (928) 603-55-58</p>
+        <p className="telephone">+7 (928)603-55-58</p>
         {isMobile && (
           <div
             className="info-icon"
