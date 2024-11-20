@@ -75,9 +75,12 @@ const CatalogComponent = () => {
     <div ref={listRef}>
       {/* Кнопка "Каталог" */}
       <Catalog onClick={handleCatalogClick} isDisabled={isDisabled} />
-      {/* Отображаем список только если он должен быть видим и мы на мобильном устройстве */}
+      {/* Отображаем список только если он должен быть видим */}
       {isListVisible && (isMobile || !isHomePage) && (
-        <SectionsList className="active" />
+        <SectionsList
+          className="active"
+          onClose={() => setListVisible(false)}
+        />
       )}
     </div>
   );

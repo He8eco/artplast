@@ -59,7 +59,7 @@ h3 {
   top: 0.75rem;
   right: 0.75rem;
   padding: 0.625rem;
-  z-index: 1000;
+  z-index: 300;
 }
 
 .header-mobile .button-categories {
@@ -99,7 +99,7 @@ h3 {
   right: 3.25rem;
   background-color: #fff;
   padding: 0.625rem;
-  z-index: 1000;
+  z-index: 400;
   color: #000;
   text-align: right;
   float: right;
@@ -155,17 +155,69 @@ h3 {
 }
 
 .header-mobile .listSections {
-  width: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.header-mobile .listSections li {
+.header-mobile .listSections li,
+.header-mobile .listSections .dropdown .categorie {
   font-size: 1.75rem;
-  padding: 0.85rem;
+  padding: 2rem;
 }
 
 .header-mobile .listSections .dropdown {
-  left: 95%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100vh;
+  z-index: 600;
+  border: none;
+  padding-top: 5rem;
 }
 .header-mobile .listSections.active {
-  top: 12.85rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100vh;
+  z-index: 500;
+  border: none;
+  margin: 0;
+  padding-top: 5rem;
+}
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 6rem;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* По умолчанию скрываем */
+  z-index: 1000;
+}
+
+/* Крестик для блока listSections */
+.listSections .close-listSections {
+  display: none;
+}
+
+/* Крестик для блока dropdown */
+.dropdown .close-dropdown {
+  display: none;
+}
+@media (max-width: 768px) {
+  .listSections .close-listSections,
+  .dropdown .close-dropdown {
+    display: block;
+  }
 }

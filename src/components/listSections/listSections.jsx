@@ -4,11 +4,12 @@ import { db } from "../../index.js";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-const SectionsList = ({ className }) => {
+const SectionsList = ({ className, onClose }) => {
   const [sections, setSections] = useState([]);
   const [categories, setCategories] = useState([]);
   const [hoveredSection, setHoveredSection] = useState(null);
   const [hoverTimeout, setHoverTimeout] = useState(null);
+  const [isDropdownVisible, setDropdownVisible] = useState(true);
 
   const navigate = useNavigate();
 
@@ -54,6 +55,7 @@ const SectionsList = ({ className }) => {
 
   const handleMouseEnter = (sectionId) => {
     clearTimeout(hoverTimeout);
+    setDropdownVisible(true); // Сбрасываем видимость dropdown
     const timer = setTimeout(() => {
       setHoveredSection(sectionId);
     }, 300);
@@ -74,6 +76,15 @@ const SectionsList = ({ className }) => {
       className={`listSections ${className}`}
       onMouseLeave={handleContainerMouseLeave}
     >
+      <button
+        className="close-listSections close-button"
+        onClick={() => {
+          onClose();
+          setHoveredSection(null); // Сброс hoveredSection
+        }}
+      >
+        ×
+      </button>
       <ul>
         {sections.map((section) => (
           <li
@@ -84,8 +95,14 @@ const SectionsList = ({ className }) => {
             onMouseEnter={() => handleMouseEnter(section.id)}
           >
             {section.name}
-            {hoveredSection === section.id && (
+            {hoveredSection === section.id && isDropdownVisible && (
               <ul className="dropdown">
+                <button
+                  className="close-dropdown close-button"
+                  onClick={() => setDropdownVisible(false)}
+                >
+                  ×
+                </button>
                 {getCategoriesBySection(section.id).map((category) => (
                   <li
                     key={category.id}
