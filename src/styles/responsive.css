@@ -111,9 +111,3 @@
     font-size: 4.6px;
   }
 }
-@media screen and (max-width: 1080px) {
-  .search {
-    height: 3rem;
-    width: 95%;
-  }
-}

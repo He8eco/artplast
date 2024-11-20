@@ -1,6 +1,5 @@
 a {
   text-decoration: none;
-  color: #000;
 }
 
 * {
@@ -34,7 +33,7 @@ a {
   border-radius: 0.5rem;
   margin: 0 0 1.5rem;
   width: 16rem;
-  height: 26rem;
+  height: 16rem;
   flex-shrink: 0;
   &:hover {
     box-shadow: 0 0 1.125rem 0.325rem rgba(0, 0, 0, 0.24);
@@ -120,8 +119,4 @@ a {
     transform: scale(0.96);
     box-shadow: 0.1875rem 0.125rem 1.375rem 0.0625rem rgba(0, 0, 0, 0.24);
   }
-}
-.search {
-  height: 3rem;
-  width: 95%;
 }

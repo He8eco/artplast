@@ -19,7 +19,7 @@
 }
 
 .header-bottom {
-  background-color: #ebeaea;
+  background-color: #860303;
 }
 
 .title {
@@ -42,26 +42,47 @@ h3 {
 .graphic p:nth-child(2) {
   text-indent: 1.75rem;
 }
-
-.header-mobile {
+.header-mobile h3 {
+  font-size: 1.5rem;
+}
+.header-mobile .telephone {
+  font-size: 1.75rem;
+  margin-right: 4rem;
+}
+.header-mobile .info-icon {
+  position: absolute;
+  top: 0.75rem; /* Настройте по вашему макету */
+  right: 0.75rem; /* Настройте по вашему макету */
+  padding: 0.625rem;
+  z-index: 1000;
+  /* Дополнительные стили */
+}
+.header-mobile .button-categories {
+  height: 3rem;
+}
+.header-mobile .burger {
+  height: 0.25rem;
+  margin: 0 0.5rem;
+}
+.header-mobile .burger::before,
+.header-mobile .burger::after {
+  height: 0.25rem;
+}
+.header-mobile .burger::before {
+  top: -0.5rem;
+}
+.header-mobile .burger::after {
+  top: 0.5rem;
+}
+.header-mobile .buttonValue {
+  border-left: 0.175rem solid #000;
+  font-size: 1.5rem;
+}
+.header-mobile .header-mobile .header-mobile .header-mobile {
   position: relative;
-  h3 {
-    font-size: 1.5rem;
-  }
-  .telephone {
-    font-size: 1.75rem;
-    margin-right: 4rem;
-  }
 
   /* Окно с информацией */
-  .info-icon {
-    position: absolute;
-    top: 0.75rem; /* Настройте по вашему макету */
-    right: 0.75rem; /* Настройте по вашему макету */
-    padding: 0.625rem;
-    z-index: 1000;
-    /* Дополнительные стили */
-  }
+
   /* Окно с информацией */
   .info-window {
     position: absolute;
@@ -93,31 +114,10 @@ h3 {
       }
     }
   }
-  .button-categories {
-    height: 3rem;
-  }
-  .burger {
-    height: 0.25rem;
-    margin: 0 0.5rem;
-  }
-  .burger::before,
-  .burger::after {
-    height: 0.25rem;
-  }
-  .burger::before {
-    top: -0.5rem;
-  }
 
-  .burger::after {
-    top: 0.5rem;
-  }
-
-  .buttonValue {
-    border-left: 0.175rem solid #000;
-    font-size: 1.5rem;
-  }
   .search {
     height: 3rem;
+    width: 65%;
     input {
       font-size: 1.5rem;
     }
