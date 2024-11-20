@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db } from "../index.js";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useParams, Link, useLocation } from "react-router-dom";
@@ -20,10 +20,35 @@ const ProductsByCategory = () => {
   const [sliderValue, setSliderValue] = useState(null);
   const [sortOrder, setSortOrder] = useState("default");
   const [activeDisplay, setActiveDisplay] = useState("lines"); // по умолчанию активен "lines"
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const filtersRef = useRef(null);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const handleDisplayClick = (displayType) => {
     setActiveDisplay(displayType); // обновляем активный элемент
   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMobile &&
+        isFiltersOpen &&
+        filtersRef.current &&
+        !filtersRef.current.contains(event.target)
+      ) {
+        setIsFiltersOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMobile, isFiltersOpen]);
 
   // Загрузка продуктов
   useEffect(() => {
@@ -182,99 +207,115 @@ const ProductsByCategory = () => {
         : [...prevSelected, company]
     );
   };
+
+  const handleFiltersToggle = () => {
+    setIsFiltersOpen((prev) => !prev);
+  };
+
   return (
     <div className="product">
       <Breadcrumb categoryName={categoryName} />
       <div className="product-and-filters">
         {/* Фильтры */}
-        <div className="filters">
-          <p>Цена, руб.</p>
-          <div className="price-block">
-            <div className="price">
-              <label>
-                <div>От</div>
-                <input
-                  type="number"
-                  name="min"
-                  value={sliderValue ? sliderValue[0] : ""}
-                  onChange={(e) =>
-                    handlePriceInputChange("min", +e.target.value)
-                  }
-                />
-              </label>
-              <label>
-                <div>До</div>
-                <input
-                  type="number"
-                  name="max"
-                  value={sliderValue ? sliderValue[1] : ""}
-                  onChange={(e) =>
-                    handlePriceInputChange("max", +e.target.value)
-                  }
-                />
-              </label>
-            </div>
-            {sliderValue && (
-              <ReactSlider
-                className="price-slider"
-                thumbClassName="price-slider-thumb"
-                trackClassName="price-slider-track"
-                min={priceRange.min}
-                max={priceRange.max}
-                value={sliderValue}
-                onChange={handleSliderChange}
-                pearling
-                minDistance={10}
-              />
-            )}
-          </div>
-          <div className="filter-group">
-            <p>Компании:</p>
-            <div className="filter-values">
-              {products.length > 0 ? (
-                [
-                  ...new Set(products.map((product) => product.companyName)),
-                ].map((company, index) => (
-                  <div
-                    key={`${company}-${index}`}
-                    className={`filter-option ${
-                      selectedCompanies.includes(company) ? "selected" : ""
-                    }`}
-                    onClick={() => toggleCompanyFilter(company)}
-                  >
-                    <span className="filter-square"></span>
-                    <span className="filter-text">{company}</span>
+        {(!isMobile || (isMobile && isFiltersOpen)) && (
+          <div className={`block-filters ${isMobile ? "mobile-filters" : ""}`}>
+            <div className="filters" ref={filtersRef}>
+              {isMobile && (
+                <button className="close-filters" onClick={handleFiltersToggle}>
+                  ×
+                </button>
+              )}
+              <p>Цена, руб.</p>
+              <div className="price-block">
+                <div className="price">
+                  <label>
+                    <div>От</div>
+                    <input
+                      type="number"
+                      name="min"
+                      value={sliderValue ? sliderValue[0] : ""}
+                      onChange={(e) =>
+                        handlePriceInputChange("min", +e.target.value)
+                      }
+                    />
+                  </label>
+                  <label>
+                    <div>До</div>
+                    <input
+                      type="number"
+                      name="max"
+                      value={sliderValue ? sliderValue[1] : ""}
+                      onChange={(e) =>
+                        handlePriceInputChange("max", +e.target.value)
+                      }
+                    />
+                  </label>
+                </div>
+                {sliderValue && (
+                  <ReactSlider
+                    className="price-slider"
+                    thumbClassName="price-slider-thumb"
+                    trackClassName="price-slider-track"
+                    min={priceRange.min}
+                    max={priceRange.max}
+                    value={sliderValue}
+                    onChange={handleSliderChange}
+                    pearling
+                    minDistance={10}
+                  />
+                )}
+              </div>
+              <div className="filter-group">
+                <p>Компании:</p>
+                <div className="filter-values">
+                  {products.length > 0 ? (
+                    [
+                      ...new Set(
+                        products.map((product) => product.companyName)
+                      ),
+                    ].map((company, index) => (
+                      <div
+                        key={`${company}-${index}`}
+                        className={`filter-option ${
+                          selectedCompanies.includes(company) ? "selected" : ""
+                        }`}
+                        onClick={() => toggleCompanyFilter(company)}
+                      >
+                        <span className="filter-square"></span>
+                        <span className="filter-text">{company}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Нет доступных компаний</p>
+                  )}
+                </div>
+              </div>
+              {Object.entries(availableFilters).map(
+                ([filterName, filterValues]) => (
+                  <div key={filterName} className="filter-group">
+                    <p>{filterName}:</p>
+                    <div className="filter-values">
+                      {filterValues.map((value) => (
+                        <div
+                          key={value}
+                          className={`filter-option ${
+                            selectedFilters[filterName]?.includes(value)
+                              ? "selected"
+                              : ""
+                          }`}
+                          onClick={() => toggleFilter(filterName, value)}
+                        >
+                          <span className="filter-square"></span>
+                          <span className="filter-text">{value}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))
-              ) : (
-                <p>Нет доступных компаний</p>
+                )
               )}
             </div>
           </div>
-          {Object.entries(availableFilters).map(
-            ([filterName, filterValues]) => (
-              <div key={filterName} className="filter-group">
-                <p>{filterName}:</p>
-                <div className="filter-values">
-                  {filterValues.map((value) => (
-                    <div
-                      key={value}
-                      className={`filter-option ${
-                        selectedFilters[filterName]?.includes(value)
-                          ? "selected"
-                          : ""
-                      }`}
-                      onClick={() => toggleFilter(filterName, value)}
-                    >
-                      <span className="filter-square"></span>
-                      <span className="filter-text">{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )
-          )}
-        </div>
+        )}
         <div className="products">
           <div className="sorting">
             <div className="sorting-by-price">
@@ -300,7 +341,64 @@ const ProductsByCategory = () => {
                 </div>
               </div>
             </div>
-
+            {isMobile && (
+              <div
+                className="mobile-filters-button"
+                onClick={handleFiltersToggle}
+              >
+                <svg
+                  width="2rem"
+                  height="2rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 7L20 7"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 7L8 7"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17 17L20 17"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M4 17L12 17"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="10"
+                    cy="7"
+                    r="2"
+                    transform="rotate(90 10 7)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="15"
+                    cy="17"
+                    r="2"
+                    transform="rotate(90 15 17)"
+                    stroke="#33363F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>Фильтры</span>
+              </div>
+            )}
             <div className="sorting-by-display">
               <svg
                 className={`squares ${

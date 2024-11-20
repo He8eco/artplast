@@ -43,14 +43,54 @@ h3 {
   text-indent: 1.75rem;
 }
 
-/* Окно с информацией */
-.info-window {
-  position: absolute;
-  top: 50px; /* Настройте по вашему макету */
-  right: 10px; /* Настройте по вашему макету */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 1000;
-  /* Дополнительные стили */
+.header-mobile {
+  position: relative;
+  h3 {
+    font-size: 1.5rem;
+  }
+  .telephone {
+    font-size: 1.75rem;
+    margin-right: 2rem;
+  }
+
+  /* Окно с информацией */
+  .info-icon {
+    position: absolute;
+    top: 0.5rem; /* Настройте по вашему макету */
+    right: 0.5rem; /* Настройте по вашему макету */
+    padding: 0.625rem;
+    z-index: 1000;
+    /* Дополнительные стили */
+  }
+  /* Окно с информацией */
+  .info-window {
+    position: absolute;
+    top: 3rem; /* Настройте по вашему макету */
+    right: 3rem; /* Настройте по вашему макету */
+    background-color: #fff;
+    padding: 0.625rem;
+    z-index: 1000;
+    color: #000;
+    text-align: right;
+    float: right;
+    border: 0.125rem solid #0a0a0a;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    p {
+      font-size: 1.25rem;
+    }
+    & > div {
+      display: flex;
+      &:first-child > p:first-child {
+        text-indent: 5.4rem;
+      }
+      & > p:first-child {
+        margin-right: 0.5rem;
+        font-weight: 600;
+      }
+      &:first-child {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
 }

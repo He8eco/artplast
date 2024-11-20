@@ -46,15 +46,13 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className={isMobile ? "header-mobile" : ""}>
       <div className="header header-top">
         <div className="title">
           <h1>Арт-Пласт</h1>
-          {!isMobile && (
-            <h3>
-              Магазин стройматериалов <br />и хозяйственных товаров
-            </h3>
-          )}
+          <h3>
+            Магазин стройматериалов <br />и хозяйственных товаров
+          </h3>
         </div>
         {!isMobile && (
           <>
@@ -77,8 +75,8 @@ export default function Header() {
           >
             {/* Укажите правильный путь к вашему файлу info.svg */}
             <svg
-              width="40px"
-              height="40px"
+              width="2.5rem"
+              height="2.5rem"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -108,13 +106,19 @@ export default function Header() {
         {/* Окно с информацией на мобильных устройствах */}
         {isMobile && isInfoOpen && (
           <div className="info-window" ref={infoRef}>
-            <p className="address">
-              г. Семикаракорск, <br />
-              ул. Калинина 138А
-            </p>
-            <div className="graphic">
-              <p>пн-пт: с 8:00 до 18:00</p>
-              <p>сб: с 9:00 до 15:00</p>
+            <div>
+              <p>Адрес:</p>
+              <p className="address">
+                г. Семикаракорск, <br />
+                ул. Калинина 138А
+              </p>
+            </div>
+            <div>
+              <p>График работы:</p>
+              <div className="graphic">
+                <p>пн-пт: с 8:00 до 18:00</p>
+                <p>сб: с 9:00 до 15:00</p>
+              </div>
             </div>
           </div>
         )}
@@ -134,8 +138,8 @@ export default function Header() {
           <>
             <Link to="/about">
               <svg
-                width="40px"
-                height="40px"
+                width="2.5rem"
+                height="2.5rem"
                 viewBox="0 -1 22 22"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +154,8 @@ export default function Header() {
             </Link>
             <Link to="/FavoritesPage">
               <svg
-                width="40px"
-                height="40px"
+                width="2.5rem"
+                height="2.5rem"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,8 +172,8 @@ export default function Header() {
             {currentUser && (
               <Link to="/SectionManagement">
                 <svg
-                  width="40px"
-                  height="40px"
+                  width="2.5rem"
+                  height="2.5rem"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

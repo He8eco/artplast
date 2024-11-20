@@ -3,6 +3,7 @@
     list-style: none;
   }
   .product-and-filters {
+    position: relative;
     display: flex;
     padding: 1rem 0;
   }
@@ -13,8 +14,11 @@
     border-top: 0.125rem solid gray;
     padding-top: 1rem;
   }
-  .filters {
+  .block-filters {
     width: 25%;
+  }
+  .filters {
+    width: 100%;
     position: relative;
     height: max-content;
     padding: 0.5rem;
@@ -194,4 +198,40 @@
     background: #ddd;
     height: 0.25rem;
   }
+  .mobile-filters-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* Добавьте необходимые отступы и стили */
+  }
+
+  .mobile-filters-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .mobile-filters {
+    width: 100%;
+    position: absolute;
+    overflow-y: auto;
+    z-index: 900;
+    padding: 1rem;
+  }
+
+  .close-filters {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .filters .filter-group {
+    margin-bottom: 1rem;
+  }
+
+  /* Дополнительные стили для элементов внутри блока фильтров */
 }
