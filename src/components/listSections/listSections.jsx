@@ -85,6 +85,7 @@ const SectionsList = ({ className, onClose }) => {
       >
         ×
       </button>
+      <p className="section-categorie-title">Разделы</p>
       <ul>
         {sections.map((section) => (
           <li
@@ -103,6 +104,7 @@ const SectionsList = ({ className, onClose }) => {
                 >
                   ×
                 </button>
+                <p className="section-categorie-title">Категории</p>
                 {getCategoriesBySection(section.id).map((category) => (
                   <li
                     key={category.id}
