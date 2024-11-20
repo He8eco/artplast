@@ -86,12 +86,12 @@
 }
 @media (max-width: 768px) {
   .promotions .stock p {
-    width: 14.5rem;
+    width: 16rem;
     font-size: 2rem;
   }
 
   .promotions .stock .line {
-    width: 80%;
+    width: 75%;
     height: 0.11rem;
   }
 }
