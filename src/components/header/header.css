@@ -5,17 +5,19 @@
   padding: 1rem 0;
   color: #fff;
   font-size: 20px;
-  a {
-    font-size: 1.25rem;
-    color: #fff;
-  }
+}
+
+.header a {
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 .header-top {
   background-image: url("../../img/header.webp");
-  p {
-    font-size: 1.25rem;
-  }
+}
+
+.header-top p {
+  font-size: 1.25rem;
 }
 
 .header-bottom {
@@ -42,110 +44,125 @@ h3 {
 .graphic p:nth-child(2) {
   text-indent: 1.75rem;
 }
+
 .header-mobile h3 {
   font-size: 1.5rem;
 }
+
 .header-mobile .telephone {
   font-size: 1.75rem;
   margin-right: 4rem;
 }
+
 .header-mobile .info-icon {
   position: absolute;
-  top: 0.75rem; /* Настройте по вашему макету */
-  right: 0.75rem; /* Настройте по вашему макету */
+  top: 0.75rem;
+  right: 0.75rem;
   padding: 0.625rem;
   z-index: 1000;
-  /* Дополнительные стили */
 }
+
 .header-mobile .button-categories {
   height: 3rem;
 }
+
 .header-mobile .burger {
   height: 0.25rem;
   margin: 0 0.5rem;
 }
+
 .header-mobile .burger::before,
 .header-mobile .burger::after {
   height: 0.25rem;
 }
+
 .header-mobile .burger::before {
   top: -0.5rem;
 }
+
 .header-mobile .burger::after {
   top: 0.5rem;
 }
+
 .header-mobile .buttonValue {
   border-left: 0.175rem solid #000;
   font-size: 1.5rem;
 }
-.header-mobile .header-mobile .header-mobile .header-mobile {
+
+.header-mobile {
   position: relative;
+}
 
-  /* Окно с информацией */
+.header-mobile .info-window {
+  position: absolute;
+  top: 3.25rem;
+  right: 3.25rem;
+  background-color: #fff;
+  padding: 0.625rem;
+  z-index: 1000;
+  color: #000;
+  text-align: right;
+  float: right;
+  border: 0.125rem solid #0a0a0a;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
 
-  /* Окно с информацией */
-  .info-window {
-    position: absolute;
-    top: 3.25rem; /* Настройте по вашему макету */
-    right: 3.25rem; /* Настройте по вашему макету */
-    background-color: #fff;
-    padding: 0.625rem;
-    z-index: 1000;
-    color: #000;
-    text-align: right;
-    float: right;
-    border: 0.125rem solid #0a0a0a;
-    border-radius: 0.5rem;
-    box-shadow: 0rem 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    p {
-      font-size: 1.25rem;
-    }
-    & > div {
-      display: flex;
-      &:first-child > p:first-child {
-        text-indent: 5.4rem;
-      }
-      & > p:first-child {
-        margin-right: 0.5rem;
-        font-weight: 600;
-      }
-      &:first-child {
-        margin-bottom: 0.5rem;
-      }
-    }
-  }
+.header-mobile .info-window p {
+  font-size: 1.25rem;
+}
 
-  .search {
-    height: 3rem;
-    width: 65%;
-    input {
-      font-size: 1.5rem;
-    }
+.header-mobile .info-window > div {
+  display: flex;
+}
 
-    .suggestion-image {
-      width: 5rem;
-      height: 5rem;
-      object-fit: cover;
-      margin-right: 1rem;
-    }
+.header-mobile .info-window > div:first-child > p:first-child {
+  text-indent: 5.4rem;
+}
 
-    .suggestion-name {
-      font-size: 1.75rem;
-    }
+.header-mobile .info-window > div > p:first-child {
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
 
-    .suggestion-section,
-    .suggestion-company {
-      font-size: 1.5rem;
-    }
-  }
-  .listSections {
-    width: 50%;
-    & li {
-      font-size: 1.75rem;
-      padding: 0.75rem;
-    }
-    .dropdown {
-      left: 95%;
-    }
-  }
+.header-mobile .info-window > div:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.header-mobile .search {
+  height: 3rem;
+  width: 65%;
+}
+
+.header-mobile .search input {
+  font-size: 1.5rem;
+}
+
+.header-mobile .search .suggestion-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.header-mobile .search .suggestion-name {
+  font-size: 1.75rem;
+}
+
+.header-mobile .search .suggestion-section,
+.header-mobile .search .suggestion-company {
+  font-size: 1.5rem;
+}
+
+.header-mobile .listSections {
+  width: 50%;
+}
+
+.header-mobile .listSections li {
+  font-size: 1.75rem;
+  padding: 0.75rem;
+}
+
+.header-mobile .listSections .dropdown {
+  left: 95%;
 }

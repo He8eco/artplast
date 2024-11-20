@@ -16,15 +16,19 @@ a {
   display: flex;
   margin-bottom: 1rem;
 }
+
 .breadcrumb {
   font-size: 1.25rem;
-  a {
-    color: rgba(0, 0, 0, 0.7);
-    &:hover {
-      color: rgba(0, 0, 0, 1);
-    }
-  }
 }
+
+.breadcrumb a {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.breadcrumb a:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
 .card {
   position: relative;
   text-align: center;
@@ -35,37 +39,41 @@ a {
   width: 16rem;
   height: 16rem;
   flex-shrink: 0;
-  &:hover {
-    box-shadow: 0 0 1.125rem 0.325rem rgba(0, 0, 0, 0.24);
-    p {
-      opacity: 0.8;
-    }
-  }
-  .product-name {
-    color: #0a0a0a;
-    font-size: 1.25rem;
-  }
-  .product-name-property {
-    color: gray;
-  }
+}
 
-  .product-price {
-    margin-top: 0.25rem;
-    font-size: 1.125rem;
-    color: #0a0a0a;
-  }
+.card:hover {
+  box-shadow: 0 0 1.125rem 0.325rem rgba(0, 0, 0, 0.24);
+}
 
-  .product-price-none {
-    text-decoration: line-through;
-  }
+.card:hover p {
+  opacity: 0.8;
+}
 
-  .product-discount-price {
-    font-size: 1.25rem;
-    color: red;
-    font-weight: bold;
-    margin-top: 0.25rem;
-    display: block;
-  }
+.card .product-name {
+  color: #0a0a0a;
+  font-size: 1.25rem;
+}
+
+.card .product-name-property {
+  color: gray;
+}
+
+.card .product-price {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  color: #0a0a0a;
+}
+
+.card .product-price-none {
+  text-decoration: line-through;
+}
+
+.card .product-discount-price {
+  font-size: 1.25rem;
+  color: red;
+  font-weight: bold;
+  margin-top: 0.25rem;
+  display: block;
 }
 
 .favorite-button {
@@ -78,6 +86,7 @@ a {
   cursor: pointer;
   padding: 0;
 }
+
 .card img {
   max-width: 90%;
   max-height: 10rem;
@@ -88,12 +97,14 @@ a {
   text-align: left;
   margin-bottom: 0.5rem;
 }
+
 .widthSectionCard {
   width: 95%;
   margin: 0 auto;
-  a {
-    color: #000;
-  }
+}
+
+.widthSectionCard a {
+  color: #000;
 }
 
 .flex {
@@ -101,10 +112,12 @@ a {
   flex-wrap: wrap;
   gap: 0rem 3rem;
 }
+
 .navigation-stroke {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
 }
+
 .button-logout {
   background-color: #131313;
   border: 0.125rem solid #000;
@@ -115,8 +128,9 @@ a {
   text-align: center !important;
   cursor: pointer;
   transition: 0.2s all;
-  &:active {
-    transform: scale(0.96);
-    box-shadow: 0.1875rem 0.125rem 1.375rem 0.0625rem rgba(0, 0, 0, 0.24);
-  }
+}
+
+.button-logout:active {
+  transform: scale(0.96);
+  box-shadow: 0.1875rem 0.125rem 1.375rem 0.0625rem rgba(0, 0, 0, 0.24);
 }

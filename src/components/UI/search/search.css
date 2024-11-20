@@ -4,73 +4,78 @@
   height: 2.5rem;
   width: 36rem;
   color: #000;
-  input {
-    outline: none;
-    height: 100%;
-    width: 100%;
-    border: 0.125rem solid #000;
-    border-radius: 0.5rem;
-    padding-left: 0.5rem;
-    font-size: 1rem;
-  }
-  button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #fff;
-    background-image: url("../../../img/loupe.svg");
-    background-size: 1.25rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 2rem;
-    height: 100%;
-    border: none;
-    border: 0.125rem solid #000;
-    border-radius: 0px 0.5rem 0.5rem 0px;
-  }
-  a {
-    color: #fff;
-  }
-  .suggestions-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    border: 0.125rem solid #fff;
-    z-index: 102;
-  }
+}
 
-  .suggestion-item {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    cursor: pointer;
-    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.2);
-    &:last-of-type {
-      border-bottom: none;
-    }
+.search input {
+  outline: none;
+  height: 100%;
+  width: 100%;
+  border: 0.125rem solid #000;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
 
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-  }
+.search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-image: url("../../../img/loupe.svg");
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 2rem;
+  height: 100%;
+  border: none;
+  border: 0.125rem solid #000;
+  border-radius: 0px 0.5rem 0.5rem 0px;
+}
 
-  .suggestion-image {
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: cover;
-    margin-right: 0.5rem;
-  }
+.search a {
+  color: #fff;
+}
 
-  .suggestion-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
+.search .suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 0.125rem solid #fff;
+  z-index: 102;
+}
 
-  .suggestion-section,
-  .suggestion-company {
-    font-size: 1rem;
-  }
+.search .suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 0.125rem solid rgba(0, 0, 0, 0.2);
+}
+
+.search .suggestion-item:last-of-type {
+  border-bottom: none;
+}
+
+.search .suggestion-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.search .suggestion-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.search .suggestion-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.search .suggestion-section,
+.search .suggestion-company {
+  font-size: 1rem;
 }
