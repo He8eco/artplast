@@ -51,6 +51,7 @@
   color: rgba(0, 0, 0, 0.5);
   padding: 0 0.625rem;
   user-select: none;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .promotion-carousel .arrow:disabled {
@@ -59,7 +60,7 @@
 
 .promotion-carousel .arrow:hover {
   color: rgba(0, 0, 0, 0.8);
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .promotion-carousel .arrow:active {
@@ -83,7 +84,14 @@
 .left-arrow {
   margin-right: 0rem;
 }
+@media (max-width: 768px) {
+  .promotions .stock p {
+    width: 14.5rem;
+    font-size: 2rem;
+  }
 
-.right-arrow {
-  /* Можно добавить дополнительные стили для правой стрелки */
+  .promotions .stock .line {
+    width: 80%;
+    height: 0.11rem;
+  }
 }

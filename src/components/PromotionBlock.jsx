@@ -141,9 +141,7 @@ const PromotionBlock = ({
                 )}
 
                 <div className="product-values">
-                  <p className="product-name">
-                    {promotion.productName || "Название товара не указано"}
-                  </p>
+                  <p className="product-name">{promotion.productName}</p>
                   <div>
                     <p
                       className={`product-price ${

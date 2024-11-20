@@ -58,7 +58,9 @@ const OrderOf = () => {
               alt={offer.categoryName}
             />
             <p className="category-name">{offer.categoryName}</p>
-            {currentUser && <p>Позиция: {offer.position}</p>}
+            {currentUser && (
+              <p className="position">Позиция: {offer.position}</p>
+            )}
           </Link>
         ))}
       </div>

@@ -215,7 +215,7 @@ h3 {
 .dropdown .close-dropdown {
   display: none;
 }
-.dropdown .section-categorie-title {
+.listSections .section-categorie-title {
   display: none;
 }
 @media (max-width: 768px) {

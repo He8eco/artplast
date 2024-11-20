@@ -111,3 +111,18 @@
     font-size: 4.6px;
   }
 }
+@media (max-width: 768px) {
+  .listSections .close-listSections,
+  .dropdown .close-dropdown {
+    display: block;
+  }
+  .listSections .section-categorie-title {
+    display: block;
+    text-align: center;
+    font-size: 2.75rem;
+    margin-bottom: 2.25rem;
+  }
+  .banner {
+    width: 100%;
+  }
+}
