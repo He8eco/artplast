@@ -138,4 +138,10 @@ h3 {
       font-size: 1.5rem;
     }
   }
+  .listSections {
+    width: 50%;
+    & li {
+      font-size: 1.75rem !important;
+    }
+  }
 }
