@@ -12,8 +12,8 @@
 .listSections.active {
   display: block;
   position: absolute;
-  top: 12.5rem;
-  left: 0.75rem;
+  top: 12.25rem;
+  left: 0.25rem;
   z-index: 100;
 }
 
@@ -38,10 +38,12 @@
   cursor: pointer;
   color: #ffffff !important;
   transition: hover 1s;
+  border-top: 0.125rem solid rgba(255, 255, 255, 0.2);
 }
 
 .listSections .section:first-child {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
+  border-top: none;
 }
 
 .listSections .section:last-child {
@@ -58,7 +60,7 @@
 
 .listSections .dropdown {
   background-color: #0a0a0a;
-  border: 5px solid #660303;
+  border: 0.3rem solid #660303;
   border-radius: 0.5rem;
   position: absolute;
   display: block;
@@ -70,7 +72,11 @@
 }
 
 .listSections .dropdown .categorie {
+  border-top: 0.125rem solid rgba(255, 255, 255, 0.2);
   padding: 0.5rem;
+}
+.listSections .dropdown .categorie:first-child {
+  border-top: none;
 }
 
 .listSections .dropdown .categorie:hover {

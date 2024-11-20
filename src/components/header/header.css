@@ -160,9 +160,12 @@ h3 {
 
 .header-mobile .listSections li {
   font-size: 1.75rem;
-  padding: 0.75rem;
+  padding: 0.85rem;
 }
 
 .header-mobile .listSections .dropdown {
   left: 95%;
+}
+.header-mobile .listSections.active {
+  top: 12.85rem;
 }
