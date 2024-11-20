@@ -69,10 +69,7 @@
     font-weight: 700;
   }
 
-  .suggestion-section {
-    font-size: 1rem;
-  }
-
+  .suggestion-section,
   .suggestion-company {
     font-size: 1rem;
   }

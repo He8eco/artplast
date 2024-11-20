@@ -50,14 +50,14 @@ h3 {
   }
   .telephone {
     font-size: 1.75rem;
-    margin-right: 2rem;
+    margin-right: 3.5rem;
   }
 
   /* Окно с информацией */
   .info-icon {
     position: absolute;
     top: 0.5rem; /* Настройте по вашему макету */
-    right: 0.5rem; /* Настройте по вашему макету */
+    right: 1rem; /* Настройте по вашему макету */
     padding: 0.625rem;
     z-index: 1000;
     /* Дополнительные стили */
@@ -91,6 +91,52 @@ h3 {
       &:first-child {
         margin-bottom: 0.5rem;
       }
+    }
+  }
+  .button-categories {
+    height: 3rem;
+  }
+  .burger {
+    height: 0.25rem;
+    margin: 0 0.5rem;
+  }
+  .burger::before,
+  .burger::after {
+    height: 0.25rem;
+  }
+  .burger::before {
+    top: -0.5rem;
+  }
+
+  .burger::after {
+    top: 0.5rem;
+  }
+
+  .buttonValue {
+    border-left: 0.175rem solid #000;
+    font-size: 1.5rem;
+  }
+  .search {
+    height: 3rem;
+    width: 40rem;
+    input {
+      font-size: 1.5rem;
+    }
+
+    .suggestion-image {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      margin-right: 0.75rem;
+    }
+
+    .suggestion-name {
+      font-size: 1.5rem;
+    }
+
+    .suggestion-section,
+    .suggestion-company {
+      font-size: 1.25rem;
     }
   }
 }

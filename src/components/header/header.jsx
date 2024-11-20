@@ -75,8 +75,8 @@ export default function Header() {
           >
             {/* Укажите правильный путь к вашему файлу info.svg */}
             <svg
-              width="2.5rem"
-              height="2.5rem"
+              width="3rem"
+              height="3rem"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -138,8 +138,8 @@ export default function Header() {
           <>
             <Link to="/about">
               <svg
-                width="2.5rem"
-                height="2.5rem"
+                width="3rem"
+                height="3rem"
                 viewBox="0 -1 22 22"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,8 +154,8 @@ export default function Header() {
             </Link>
             <Link to="/FavoritesPage">
               <svg
-                width="2.5rem"
-                height="2.5rem"
+                width="3rem"
+                height="3rem"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -172,8 +172,8 @@ export default function Header() {
             {currentUser && (
               <Link to="/SectionManagement">
                 <svg
-                  width="2.5rem"
-                  height="2.5rem"
+                  width="3rem"
+                  height="3rem"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
