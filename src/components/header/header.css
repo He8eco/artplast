@@ -98,7 +98,7 @@ h3 {
   top: 3.75rem;
   right: 3.75rem;
   background-color: #fff;
-  padding: 0.625rem;
+  padding: 0.75rem;
   z-index: 400;
   color: #000;
   text-align: right;
@@ -117,7 +117,7 @@ h3 {
 }
 
 .header-mobile .info-window > div:first-child > p:first-child {
-  text-indent: 7.4rem;
+  text-indent: 8rem;
 }
 
 .header-mobile .info-window > div > p:first-child {
