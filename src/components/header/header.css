@@ -46,11 +46,11 @@ h3 {
 }
 
 .header-mobile h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .header-mobile .telephone {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-right: 4rem;
 }
 
@@ -95,8 +95,8 @@ h3 {
 
 .header-mobile .info-window {
   position: absolute;
-  top: 3.25rem;
-  right: 3.25rem;
+  top: 3.75rem;
+  right: 3.75rem;
   background-color: #fff;
   padding: 0.625rem;
   z-index: 400;
@@ -109,7 +109,7 @@ h3 {
 }
 
 .header-mobile .info-window p {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .header-mobile .info-window > div {
@@ -117,7 +117,7 @@ h3 {
 }
 
 .header-mobile .info-window > div:first-child > p:first-child {
-  text-indent: 5.4rem;
+  text-indent: 7.4rem;
 }
 
 .header-mobile .info-window > div > p:first-child {
