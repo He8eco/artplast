@@ -488,9 +488,9 @@ const ProductsByCategory = () => {
                                   {product.shortSpecs.map((spec, index) => (
                                     <li key={index}>
                                       <span className="product-name-property">
-                                        {spec.name}
+                                        {spec.name}: 
                                       </span>
-                                      : {spec.value}
+                                      <span> {spec.value}</span>
                                     </li>
                                   ))}
                                 </ul>

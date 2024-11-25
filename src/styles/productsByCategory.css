@@ -350,4 +350,34 @@
     margin-top: 0.525rem;
     height: 0.5rem;
   }
+
+  .product .product-photo {
+    height: 14rem;
+  }
+
+  .product .product-values {
+    margin-left: 1.5rem;
+  }
+
+  .product .product-name {
+    font-size: 2rem;
+  }
+
+  .product .product-values span {
+    font-size: 1.75rem;
+  }
+
+  .product .product-price {
+    margin-top: 0.25rem;
+    font-size: 1.75rem;
+    color: #0a0a0a;
+  }
+
+  .product .product-discount-price {
+    font-size: 1.75rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    display: block;
+  }
 }
