@@ -139,19 +139,19 @@ h3 {
 }
 
 .header-mobile .search .suggestion-image {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   object-fit: cover;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .header-mobile .search .suggestion-name {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 .header-mobile .search .suggestion-section,
 .header-mobile .search .suggestion-company {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .header-mobile .listSections {
