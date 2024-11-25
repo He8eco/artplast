@@ -293,10 +293,8 @@
   .product .filter-square {
     width: 1.75rem;
     height: 1.75rem;
-    border: 0.0625rem solid #000;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-    border-radius: 0.25rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0rem;
   }
 
   .product .filter-text {
@@ -316,7 +314,7 @@
   .product .filters label div {
     height: 3rem;
     font-size: 1.75rem;
-    padding: 0.35rem 0.25rem 0 0.5rem;
+    padding: 0rem 0.25rem 0 0.5rem;
   }
 
   .product .filters input {
@@ -339,7 +337,7 @@
     padding-bottom: 2rem;
   }
   .product .price-slider {
-    width: 43%;
+    width: 50%;
   }
 
   .product .price-slider-thumb {
