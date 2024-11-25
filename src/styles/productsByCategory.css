@@ -264,7 +264,7 @@
   }
   .products-filters {
     display: flex;
-    width: 90%;
+    width: 60%;
     justify-content: space-between;
     align-items: center;
   }
@@ -301,5 +301,10 @@
     fill: #000;
     width: 3rem;
     height: 3rem;
+  }
+
+  .product .sorting .sorting-by-price {
+    flex-direction: column;
+    align-items: center;
   }
 }
