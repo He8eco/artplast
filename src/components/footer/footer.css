@@ -35,13 +35,17 @@ footer {
   text-align: center;
 }
 @media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
   .contacts {
-    width: 50%;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .map {
     display: flex;
-    width: 50%;
+    width: 100%;
     background-color: red;
     justify-content: center;
     align-items: center;
@@ -51,6 +55,7 @@ footer {
     font-size: 1.75rem;
   }
   .contacts p:first-child {
+    text-align: center;
     font-size: 2rem;
   }
 
