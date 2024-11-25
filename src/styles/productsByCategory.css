@@ -3,7 +3,6 @@
 }
 
 .product .product-and-filters {
-  position: relative;
   display: flex;
   padding: 1rem 0;
 }
@@ -240,6 +239,8 @@
   width: 100%;
   position: absolute;
   overflow-y: auto;
+  top: 0rem;
+  left: 0;
   z-index: 900;
   padding: 1rem;
 }
@@ -314,7 +315,7 @@
   .product .filters label div {
     height: 3rem;
     font-size: 1.75rem;
-    padding: 0rem 0.25rem 0 0.5rem;
+    padding: 0.1rem 0.25rem 0 0.5rem;
   }
 
   .product .filters input {
@@ -337,7 +338,7 @@
     padding-bottom: 2rem;
   }
   .product .price-slider {
-    width: 48%;
+    width: 47%;
   }
 
   .product .price-slider-thumb {
