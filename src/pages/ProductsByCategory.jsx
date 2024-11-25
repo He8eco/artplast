@@ -225,8 +225,8 @@ const ProductsByCategory = () => {
                   ×
                 </button>
               )}
-              <p>Цена, руб.</p>
               <div className="price-block">
+                <p>Цена, руб.</p>
                 <div className="price">
                   <label>
                     <div>От</div>

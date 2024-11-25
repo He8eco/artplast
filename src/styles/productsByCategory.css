@@ -246,11 +246,11 @@
 
 .product .close-filters {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.5rem;
+  right: 0.5rem;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 4rem;
   cursor: pointer;
 }
 
@@ -268,6 +268,11 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .product .filter-group p {
+    font-size: 1.75rem;
+  }
+
   .product .filter-values {
     display: flex;
     flex-wrap: wrap;
@@ -282,7 +287,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
 
   .product .filter-square {
@@ -306,5 +311,49 @@
   .product .sorting .sorting-by-price {
     flex-direction: column;
     align-items: center;
+  }
+
+  .product .filters label div {
+    height: 2.5rem;
+    padding: 0.125rem;
+    border: 0.0625rem solid #000;
+    border-right: none;
+    font-size: 1.75rem;
+  }
+
+  .product .filters input {
+    width: 8rem;
+    height: 2.5rem;
+    padding: 0.125rem;
+    margin: 0 2rem 0.5rem 0;
+    border: 0.0625rem solid #000;
+    border-left: none;
+    outline: none;
+    font-size: 1.5rem;
+  }
+
+  .product .filters p {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .product .filters .price-block {
+    padding-bottom: 2rem;
+  }
+  .product .price-slider {
+    width: 36%;
+    margin: 0.625rem 0;
+    display: block;
+  }
+
+  .product .price-slider-thumb {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .product .price-slider-track {
+    margin-top: 0.525rem;
+    background: #ddd;
+    height: 0.5rem;
   }
 }
