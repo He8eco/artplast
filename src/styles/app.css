@@ -148,23 +148,23 @@ a {
   }
 
   .card .product-name {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .card .product-price {
     margin-top: 0.25rem;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 
   .card .product-discount-price {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-top: 0rem;
   }
   .card .position {
     font-size: 1.25rem;
   }
   .favorite-button svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
