@@ -226,10 +226,14 @@
   cursor: pointer;
 }
 
-.product .mobile-filters-button img {
-  width: 1.5rem;
-  height: 1.5rem;
+.product .mobile-filters-button svg {
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 0.5rem;
+}
+
+.product .mobile-filters-button span {
+  font-size: 1.5rem;
 }
 
 .product .mobile-filters {
@@ -252,4 +256,50 @@
 
 .product .filters .filter-group {
   margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .product .products {
+    width: 100%;
+    margin-left: 0rem;
+  }
+  .products-filters {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product .filter-values {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .product .products .sorting-by-price p {
+    font-size: 1.5rem;
+  }
+
+  .product .filter-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+
+  .product .filter-square {
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 0.0625rem solid #000;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .product .filter-text {
+    font-size: 1.5rem;
+  }
+  .product .sorting .sorting-by-display svg {
+    fill: #000;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

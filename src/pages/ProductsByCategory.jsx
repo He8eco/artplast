@@ -318,87 +318,89 @@ const ProductsByCategory = () => {
         )}
         <div className="products">
           <div className="sorting">
-            <div className="sorting-by-price">
-              <p>Сортировать по цене:</p>
-              <div className="sorting-options">
+            <div className="products-filters">
+              {isMobile && (
                 <div
-                  className={`filter-option ${
-                    sortOrder === "asc" ? "selected" : ""
-                  }`}
-                  onClick={() => handleSortOrder("asc")}
+                  className="mobile-filters-button"
+                  onClick={handleFiltersToggle}
                 >
-                  <span className="filter-square"></span>
-                  <span className="filter-text">От меньшей</span>
+                  <svg
+                    width="2rem"
+                    height="2rem"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 7L20 7"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M4 7L8 7"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M17 17L20 17"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M4 17L12 17"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <circle
+                      cx="10"
+                      cy="7"
+                      r="2"
+                      transform="rotate(90 10 7)"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <circle
+                      cx="15"
+                      cy="17"
+                      r="2"
+                      transform="rotate(90 15 17)"
+                      stroke="#33363F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <span>Фильтры</span>
                 </div>
-                <div
-                  className={`filter-option ${
-                    sortOrder === "desc" ? "selected" : ""
-                  }`}
-                  onClick={() => handleSortOrder("desc")}
-                >
-                  <span className="filter-square"></span>
-                  <span className="filter-text">От большей</span>
+              )}
+              <div className="sorting-by-price">
+                <p>Сортировать по цене:</p>
+                <div className="sorting-options">
+                  <div
+                    className={`filter-option ${
+                      sortOrder === "asc" ? "selected" : ""
+                    }`}
+                    onClick={() => handleSortOrder("asc")}
+                  >
+                    <span className="filter-square"></span>
+                    <span className="filter-text">От меньшей</span>
+                  </div>
+                  <div
+                    className={`filter-option ${
+                      sortOrder === "desc" ? "selected" : ""
+                    }`}
+                    onClick={() => handleSortOrder("desc")}
+                  >
+                    <span className="filter-square"></span>
+                    <span className="filter-text">От большей</span>
+                  </div>
                 </div>
               </div>
             </div>
-            {isMobile && (
-              <div
-                className="mobile-filters-button"
-                onClick={handleFiltersToggle}
-              >
-                <svg
-                  width="2rem"
-                  height="2rem"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 7L20 7"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M4 7L8 7"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M17 17L20 17"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M4 17L12 17"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <circle
-                    cx="10"
-                    cy="7"
-                    r="2"
-                    transform="rotate(90 10 7)"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                  <circle
-                    cx="15"
-                    cy="17"
-                    r="2"
-                    transform="rotate(90 15 17)"
-                    stroke="#33363F"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>Фильтры</span>
-              </div>
-            )}
             <div className="sorting-by-display">
               <svg
                 className={`squares ${
