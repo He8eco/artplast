@@ -264,7 +264,7 @@
   }
   .products-filters {
     display: flex;
-    width: 60%;
+    width: 70%;
     justify-content: space-between;
     align-items: center;
   }
@@ -337,7 +337,7 @@
     padding-bottom: 2rem;
   }
   .product .price-slider {
-    width: 50%;
+    width: 48%;
   }
 
   .product .price-slider-thumb {
