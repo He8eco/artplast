@@ -314,16 +314,14 @@
   }
 
   .product .filters label div {
-    height: 2.5rem;
-    padding: 0.125rem;
-    border: 0.0625rem solid #000;
-    border-right: none;
+    height: 3rem;
     font-size: 1.75rem;
+    padding: 0.35rem 0.25rem 0 0.5rem;
   }
 
   .product .filters input {
-    width: 8rem;
-    height: 2.5rem;
+    width: 9rem;
+    height: 3rem;
     padding: 0.125rem;
     margin: 0 2rem 0.5rem 0;
     border: 0.0625rem solid #000;
@@ -341,9 +339,7 @@
     padding-bottom: 2rem;
   }
   .product .price-slider {
-    width: 36%;
-    margin: 0.625rem 0;
-    display: block;
+    width: 43%;
   }
 
   .product .price-slider-thumb {
@@ -353,7 +349,6 @@
 
   .product .price-slider-track {
     margin-top: 0.525rem;
-    background: #ddd;
     height: 0.5rem;
   }
 }
