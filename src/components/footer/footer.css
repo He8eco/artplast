@@ -34,3 +34,11 @@ footer {
   width: 100%;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .contacts p {
+    font-size: 1.75rem;
+  }
+  .contacts p:first-child {
+    font-size: 2rem;
+  }
+}

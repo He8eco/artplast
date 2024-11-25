@@ -23,104 +23,106 @@ import Logout from "./pages/Logout";
 
 export default function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <Header />
+    <div className="page">
+      <AuthProvider>
+        <BrowserRouter>
+          <Header />
 
-        <div className="main">
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/about" element={<About />} />
-            <Route
-              path="/productsByCategory"
-              element={<ProductsByCategory />}
-            />
-            <Route path="/favoritesPage" element={<FavoritesPage />} />
-            <Route
-              path="/sectionManagement"
-              element={
-                <ProtectedRoute>
-                  <SectionManagement />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/offers"
-              element={
-                <ProtectedRoute>
-                  <Offers />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/addProduct"
-              element={
-                <ProtectedRoute>
-                  <AddProduct />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/editProduct"
-              element={
-                <ProtectedRoute>
-                  <EditProduct />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/deleteProduct"
-              element={
-                <ProtectedRoute>
-                  <DeleteProduct />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/categoryManagement"
-              element={
-                <ProtectedRoute>
-                  <CategoryManagement />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/managePromotions"
-              element={
-                <ProtectedRoute>
-                  <ManagePromotions />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/templateSpecifications"
-              element={
-                <ProtectedRoute>
-                  <TemplateSpecifications />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/logout"
-              element={
-                <ProtectedRoute>
-                  <Logout />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/loginPage" element={<LoginPage />} />
-            <Route
-              path="/:sectionName/:categoryName"
-              element={<ProductsByCategory />}
-            />
-            <Route
-              path="/:sectionName/:categoryName/:productId"
-              element={<ProductDetails />}
-            />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-    </AuthProvider>
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/productsByCategory"
+                element={<ProductsByCategory />}
+              />
+              <Route path="/favoritesPage" element={<FavoritesPage />} />
+              <Route
+                path="/sectionManagement"
+                element={
+                  <ProtectedRoute>
+                    <SectionManagement />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/offers"
+                element={
+                  <ProtectedRoute>
+                    <Offers />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/addProduct"
+                element={
+                  <ProtectedRoute>
+                    <AddProduct />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/editProduct"
+                element={
+                  <ProtectedRoute>
+                    <EditProduct />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/deleteProduct"
+                element={
+                  <ProtectedRoute>
+                    <DeleteProduct />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/categoryManagement"
+                element={
+                  <ProtectedRoute>
+                    <CategoryManagement />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/managePromotions"
+                element={
+                  <ProtectedRoute>
+                    <ManagePromotions />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/templateSpecifications"
+                element={
+                  <ProtectedRoute>
+                    <TemplateSpecifications />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/logout"
+                element={
+                  <ProtectedRoute>
+                    <Logout />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/loginPage" element={<LoginPage />} />
+              <Route
+                path="/:sectionName/:categoryName"
+                element={<ProductsByCategory />}
+              />
+              <Route
+                path="/:sectionName/:categoryName/:productId"
+                element={<ProductDetails />}
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
+    </div>
   );
 }
