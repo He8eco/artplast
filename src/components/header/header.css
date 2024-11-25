@@ -51,7 +51,7 @@ h3 {
 
 .header-mobile .telephone {
   font-size: 2rem;
-  margin-right: 4rem;
+  margin-right: 4.5rem;
 }
 
 .header-mobile .info-icon {
@@ -63,7 +63,7 @@ h3 {
 }
 
 .header-mobile .button-categories {
-  height: 3rem;
+  height: 3.5rem;
 }
 
 .header-mobile .burger {
@@ -117,7 +117,7 @@ h3 {
 }
 
 .header-mobile .info-window > div:first-child > p:first-child {
-  text-indent: 8rem;
+  text-indent: 8.5rem;
 }
 
 .header-mobile .info-window > div > p:first-child {
