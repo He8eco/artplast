@@ -50,11 +50,9 @@ export default function Header() {
       <div className="header header-top">
         <div className="title">
           <h1>Арт-Пласт</h1>
-          {!isMobile && (
-            <h3>
-              Магазин стройматериалов <br />и хозяйственных товаров
-            </h3>
-          )}
+          <h3>
+            Магазин стройматериалов <br />и хозяйственных товаров
+          </h3>
         </div>
         {!isMobile && (
           <>
