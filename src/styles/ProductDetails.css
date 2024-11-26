@@ -210,17 +210,17 @@
   }
 
   .product-details .product .product-specs {
-    width: 52%;
+    width: 50%;
     margin-left: 1.5rem;
   }
 
   .product-details .product .product-specs p {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
     font-weight: 700;
   }
 
   .product-details .product .product-specs span {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .product-details .product-description {
