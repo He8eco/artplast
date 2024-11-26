@@ -204,7 +204,7 @@
 
 @media (max-width: 768px) {
   .autorization {
-    height: 30vh;
+    height: 50vh;
   }
   .autorization .title {
     font-size: 2.25rem;

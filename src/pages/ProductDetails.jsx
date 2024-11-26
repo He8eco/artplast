@@ -133,29 +133,31 @@ const ProductDetails = () => {
             </span>
           </div>
         </div>
-        <div className="product-specs">
-          <p>Технические характеристики</p>
-          <ul>
-            {product.fullSpecs &&
-              product.fullSpecs.map((spec, index) => (
-                <li key={index}>
-                  <span className="product-name-property">{spec.name}:</span>{" "}
-                  <span>{spec.value}</span>
-                </li>
-              ))}
-          </ul>
-        </div>
-        <div>
-          <p
-            className={`product-price ${
-              product.discount ? "product-price-none" : ""
-            }`}
-          >
-            {product.price} ₽
-          </p>
-          {product.discount && (
-            <p className="product-discount-price">{product.discount} ₽</p>
-          )}
+        <div className="product-specs-price">
+          <div className="product-specs">
+            <p>Технические характеристики</p>
+            <ul>
+              {product.fullSpecs &&
+                product.fullSpecs.map((spec, index) => (
+                  <li key={index}>
+                    <span className="product-name-property">{spec.name}:</span>{" "}
+                    <span>{spec.value}</span>
+                  </li>
+                ))}
+            </ul>
+          </div>
+          <div>
+            <p
+              className={`product-price ${
+                product.discount ? "product-price-none" : ""
+              }`}
+            >
+              {product.price} ₽
+            </p>
+            {product.discount && (
+              <p className="product-discount-price">{product.discount} ₽</p>
+            )}
+          </div>
         </div>
       </div>
       <p className="description-title">Описание</p>

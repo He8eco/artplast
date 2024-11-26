@@ -125,10 +125,6 @@
   height: 18.75rem;
 }
 
-.product-details .product .product-specs {
-  width: 30%;
-}
-
 .product-details .product .product-specs p {
   font-size: 1.25rem;
   font-weight: 700;
@@ -154,7 +150,8 @@
 }
 
 .product-details .product-price {
-  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .product-details .product-price-none {
@@ -162,15 +159,24 @@
 }
 
 .product-details .product-discount-price {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: red;
   font-weight: bold;
   margin-top: 0.25rem;
   display: block;
 }
+
+.product-specs-price {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 1.5rem;
+}
 .mobile-image-container {
   display: flex;
   align-items: center;
+  height: 21rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
   .product-details .product .images-container {
@@ -181,13 +187,17 @@
   .product-details .product .images-container .thumbnail-column {
     display: flex;
     flex-direction: row;
-    height: 6.25rem;
+    height: 8rem;
     margin-right: 0rem;
   }
 
   .product-details .product .images-container .arrow-button {
-    width: 1.5rem;
+    width: 2rem;
     height: 100%;
+  }
+
+  .product-details .product .images-container .arrow-button span {
+    font-size: 1.5rem;
   }
   .product-details .product .images-container .up-arrow {
     right: 0;
@@ -207,11 +217,6 @@
 
   .product-details .product-name {
     font-size: 2rem;
-  }
-
-  .product-details .product .product-specs {
-    width: 48%;
-    margin-left: 1.5rem;
   }
 
   .product-details .product .product-specs p {
@@ -248,9 +253,21 @@
 
   .product-details .product-discount-price {
     font-size: 1.9rem;
-    color: red;
-    font-weight: bold;
     margin-top: 0.25rem;
-    display: block;
+  }
+
+  .product-details .product .main-image-container img {
+    width: 21rem;
+    height: 21rem;
+  }
+
+  .product-details .product .images-container .thumbnail-column img {
+    height: 8rem;
+    width: 8rem;
+    margin-right: 0.5rem;
+  }
+
+  .product-details .product .images-container .arrow {
+    background: rgba(0, 0, 0, 0.1);
   }
 }

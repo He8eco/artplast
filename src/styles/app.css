@@ -137,8 +137,6 @@ footer {
 
 .flex {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0rem 3rem;
 }
 
 .navigation-stroke {
