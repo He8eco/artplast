@@ -117,20 +117,21 @@ const ProductDetails = () => {
               <span>&gt;</span>
             </button>
           </div>
-
-          <span className="arrow left-arrow" onClick={showPreviousImage}>
-            &lt;
-          </span>
-          <div className="main-image-container">
-            <img
-              className="main-image"
-              src={product.images[selectedImageIndex]}
-              alt={`${product.name} main`}
-            />
+          <div className="mobile-image-container">
+            <span className="arrow left-arrow" onClick={showPreviousImage}>
+              &lt;
+            </span>
+            <div className="main-image-container">
+              <img
+                className="main-image"
+                src={product.images[selectedImageIndex]}
+                alt={`${product.name} main`}
+              />
+            </div>
+            <span className="arrow right-arrow" onClick={showNextImage}>
+              &gt;
+            </span>
           </div>
-          <span className="arrow right-arrow" onClick={showNextImage}>
-            &gt;
-          </span>
         </div>
         <div className="product-specs">
           <p>Технические характеристики</p>
@@ -138,8 +139,8 @@ const ProductDetails = () => {
             {product.fullSpecs &&
               product.fullSpecs.map((spec, index) => (
                 <li key={index}>
-                  <span className="product-name-property">{spec.name}</span>:{" "}
-                  {spec.value}
+                  <span className="product-name-property">{spec.name}:</span>{" "}
+                  <span>{spec.value}</span>
                 </li>
               ))}
           </ul>
