@@ -203,10 +203,21 @@
 @media (max-width: 768px) {
   .autorization .title {
     font-size: 2.25rem;
+    margin-bottom: 1.5rem;
   }
   .editing input {
     width: 32rem;
     height: 3.5rem;
     font-size: 1.75rem;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .editing .button-editing {
+    width: 20rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 }
