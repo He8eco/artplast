@@ -199,3 +199,14 @@
 .autorization .button-editing {
   margin: 0.25rem auto 0;
 }
+
+@media (max-width: 768px) {
+  .autorization .title {
+    font-size: 2.25rem;
+  }
+  .editing input {
+    width: 28rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
