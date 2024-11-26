@@ -247,11 +247,11 @@
 
 .product .close-filters {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0.75rem;
+  right: 1.25rem;
   background: none;
   border: none;
-  font-size: 4rem;
+  font-size: 6rem;
   cursor: pointer;
 }
 @media (max-width: 768px) {
