@@ -190,7 +190,7 @@
   text-align: center;
   margin: 0 auto;
   align-items: center;
-  height: 80vh;
+  height: 30vh;
 }
 
 .autorization .title {
@@ -204,12 +204,7 @@
 
 @media (max-width: 768px) {
   .autorization {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: auto auto;
-    align-items: center;
+    height: 50vh;
   }
   .autorization .title {
     font-size: 2.25rem;
