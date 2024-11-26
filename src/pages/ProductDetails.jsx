@@ -105,7 +105,6 @@ const ProductDetails = () => {
                         ? "selected-thumbnail"
                         : ""
                     }`}
-                    style={{ width: "100px", height: "100px" }}
                     onClick={() => setSelectedImageIndex(thumbnailIndex)}
                   />
                 );
@@ -127,7 +126,6 @@ const ProductDetails = () => {
               className="main-image"
               src={product.images[selectedImageIndex]}
               alt={`${product.name} main`}
-              style={{ width: "300px", height: "300px" }}
             />
           </div>
           <span className="arrow right-arrow" onClick={showNextImage}>

@@ -29,6 +29,11 @@
   transition: all 0.3s ease;
 }
 
+.product-details .product .images-container .thumbnail-column img {
+  height: 6.25rem;
+  width: 6.25rem;
+}
+
 .product-details .product .images-container .thumbnail {
   cursor: pointer;
   border: 0.125rem solid transparent;
@@ -113,6 +118,11 @@
 .product-details .product .images-container .arrow:active {
   background: rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, 0.8);
+}
+
+.product-details .product .main-image-container img {
+  width: 18.75rem;
+  height: 18.75rem;
 }
 
 .product-details .product .product-specs {
