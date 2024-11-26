@@ -226,8 +226,8 @@
 }
 
 .product .mobile-filters-button svg {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-right: 0.5rem;
 }
 
@@ -282,6 +282,7 @@
 
   .product .products .sorting-by-price p {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .product .filter-option {
@@ -301,10 +302,20 @@
   .product .filter-text {
     font-size: 1.5rem;
   }
+
+  .product .sorting {
+    padding-bottom: 0.75rem;
+  }
+
   .product .sorting .sorting-by-display svg {
     fill: #000;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .product .sorting .sorting-by-display svg:first-of-type {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .product .sorting .sorting-by-price {
@@ -379,5 +390,13 @@
     font-weight: bold;
     margin-top: 0.25rem;
     display: block;
+  }
+  .product .product-block {
+    border-top: 0.25rem solid gray;
+    padding: 1.25rem 0;
+  }
+  .product .squares-cards {
+    border-top: 0.25rem solid gray;
+    padding-top: 1.5rem;
   }
 }
