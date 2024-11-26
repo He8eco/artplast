@@ -193,7 +193,8 @@ footer {
   }
 
   .breadcrumb {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .breadcrumb a {

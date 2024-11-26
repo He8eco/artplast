@@ -254,10 +254,6 @@
   font-size: 4rem;
   cursor: pointer;
 }
-
-.product .filters .filter-group {
-  margin-bottom: 1rem;
-}
 @media (max-width: 768px) {
   .product .products {
     width: 100%;
@@ -270,6 +266,9 @@
     align-items: center;
   }
 
+  .product .filters .filter-group {
+    margin-bottom: 0.75rem;
+  }
   .product .filter-group p {
     font-size: 1.75rem;
   }
@@ -350,6 +349,7 @@
   }
   .product .price-slider {
     width: 47%;
+    margin-bottom: 1.5rem;
   }
 
   .product .price-slider-thumb {
