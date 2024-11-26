@@ -108,6 +108,7 @@ export default function ManagePromotions() {
       categoryName: selectedProduct.categoryName,
       price: selectedProduct.price,
       discount: selectedProduct.discount,
+      companyName: selectedProduct.companyName,
     });
 
     // Очищаем поля после добавления

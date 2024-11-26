@@ -70,7 +70,6 @@
 
 .promotion-products {
   display: flex;
-  justify-content: space-between;
   width: calc(100% - 2.5rem); /* Учтем ширину стрелок */
   transition: transform 0.5s ease;
 }

@@ -379,15 +379,13 @@
   }
 
   .product .product-price {
-    margin-top: 0.25rem;
-    font-size: 1.75rem;
+    margin-top: 0.75rem;
+    font-size: 1.9rem;
     color: #0a0a0a;
   }
 
   .product .product-discount-price {
-    font-size: 1.75rem;
-    color: red;
-    font-weight: bold;
+    font-size: 2rem;
     margin-top: 0.25rem;
     display: block;
   }
